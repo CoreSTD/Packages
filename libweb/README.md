@@ -13,7 +13,8 @@
 ```bash
 git clone https://github.com/libbase/Packages.git
 cd Packages/libweb
-sudo make lib
+sudo make dlfull
+# sudo make lib  // RECOMPILE THE LIB
 ```
 
 # Examples

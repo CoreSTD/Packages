@@ -2,6 +2,12 @@
 
 all: compile_w_ssl
 
+download_lb:
+	git clone https://github.com/libbase/base.git
+	git clone https://github.com/libbase/lbg-compiler.git
+	cd base; sudo make; cd ..
+	sudo make lib
+
 compile_w_ssl:
 	gcc -ffreestanding \
 	web.c src/*.c \
