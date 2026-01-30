@@ -1,2 +1,2 @@
 # Packages
-A list of packages for libbase
+A list of packages for and maintained by CoreSTD
