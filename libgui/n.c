@@ -124,7 +124,7 @@ void draw_text(wi_t wi, int pos_col, int pos_height, char *title, float scale, f
         scale = 2.0f;
 
     glPushMatrix();
-    glScalef(scale, scale, 1);
+    glScalef(scale, scale, 1.0f);
     glTranslatef(pos_col, pos_height, 0);
     glColor3f(r, g, b);
 
@@ -160,13 +160,21 @@ void draw_window(wi_t wi)
     draw_rounded_box(
         -0.6,
         0.5,
-        0.5f,
+        0.55f,
         0.2f,
         0.1f,
         18,
         (float [3]){1.0f, 0.0f, 0.0f}
     );
-    draw_text(wi, 62, 95, "Disassembled View", 1.5f, 1.0f, 1.0f, 1.0f);
+    draw_text(wi, 35, 72, "Disassembled View", 2.0f, 1.0f, 1.0f, 1.0f);
+    char *BULLET_POINT_LIST = "- Option\n"
+                            "- Option\n"
+                            "- Option\n"
+                            "- Option\n"
+                            "- Option\n"
+                            "- Option\n"
+                            "- Option\n";
+    draw_text(wi, 35, 120, BULLET_POINT_LIST, 2.0f, 0.0f, 0.0f, 0.0f);
     
     draw_rounded_box(
         0,
