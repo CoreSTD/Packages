@@ -129,6 +129,7 @@ handler_t request_handler(cwr_t wr)
 	_WEB_->routes[r]->handle(_WEB_->routes[r], wr);
 
 	request_Destruct(wr);
+	thread_kill(_WEB_->routes[r]);
 	return NULL;
 }
 
